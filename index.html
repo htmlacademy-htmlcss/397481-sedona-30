@@ -1,12 +1,160 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+</head>
 
-  </body>
+<body>
+
+  <header>
+    <nav>
+      <a>
+        <img src="https://placekitten.com/138/70" width="138" height="70" alt="Логотип компании">
+      </a>
+      <ul>
+        <li><a href="blank.html">Информация</a></li>
+        <li><a href="blank.html">Фото и видео</a></li>
+        <li><a href="blank.html">Карта штата</a></li>
+        <li><a href="catalog.html">Гостиницы</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Гостиницы Седоны</h1>
+
+    <section>
+      <h2>Добро пожаловать в Седону</h2>
+      <img src="https://placekitten.com/455/350" width="455" height="350" alt="Добро пожаловать в Седону">
+    </section>
+
+    <section>
+      <h2>Преимущества</h2>
+      <p>Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+      <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+
+      <div>
+        <p>Настоящий городок
+        </p>
+        <p>— №1 —</p>
+        <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+        <img src="https://placekitten.com/800/256" width="800" height="256" alt="Виды Седоны">
+      </div>
+
+      <ul>
+        <li>
+          <h3>Жильё</h3>
+          <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+        </li>
+        <li>
+          <h3>Еда</h3>
+          <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+        </li>
+        <li>
+          <h3>Сувениры</h3>
+          <p>Не только китайского, но и местного производства!
+          </p>
+        </li>
+      </ul>
+
+      <div>
+        <img src="https://placekitten.com/800/256" width="800" height="256" alt="Виды Седоны">
+        <p>Там есть Мост дьявола</p>
+        <p>— №2 —</p>
+        <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+      </div>
+
+      <ul>
+        <li>
+          <h3>Небольшая площадь
+          </h3>
+          <p>— №3 —</p>
+          <p>Все достопримечательности находятся очень близко</p>
+        </li>
+        <li>
+          <h3>Красивая дорога
+          </h3>
+          <p>— №4 —</p>
+          <p>Ехать в седону из лас-вегаса совсем не скучно!</p>
+        </li>
+        <li>
+          <h3>Мало туристов
+          </h3>
+          <p>— №5 —</p>
+          <p>Большинство едет в гранд каньон и толпится там</p>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Предложение</h2>
+      <p>Заинтересовались?</p>
+      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+
+      <section>
+        <h2>Бронирование</h2>
+        <button type="button">Поиск гостиницы в Седоне</button>
+        <form action="https://echo.htmlacademy.ru/" method="POST">
+
+          <label>Дата заезда:
+            <input type="text" name="date-in" placeholder="24 апреля 2017">
+            <!-- <button type="button">Здесь будет кнопка календаря</button> -->
+          </label>
+
+          <label>Дата выезда:
+            <input type="text" name="date-out" placeholder="4 июля 2017">
+            <!-- <button type="button">Здесь будет кнопка календаря</button> -->
+          </label>
+
+          <label for="adults-count">Взрослые:</label>
+          <button type="button">-</button>
+          <input type="number" value="2" name="adults" id="adults-count">
+          <button type="button">+</button>
+
+          <label for="childrens-count">Дети:</label>
+          <button type="button">-</button>
+          <input type="number" value="0" name="childrens" id="childrens-count">
+          <button type="button">+</button>
+
+          <button>Найти</button>
+        </form>
+      </section>
+
+    </section>
+
+    <section>
+      <h2>Карта</h2>
+      <!-- Здесь будет карта -->
+    </section>
+
+  </main>
+
+  <footer>
+    <section>
+      <h2>Наши контакты</h2>
+      <p>
+        <a href="#">#VISITSEDONA</a>
+        <a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Мы в соцсетях</h2>
+      <ul>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Youtube</a></li>
+      </ul>
+    </section>
+
+    <p>
+      Website by
+      <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="https://placekitten.com/115/41" width="115" height="41" alt="Интенсив «HTML и CSS. Профессиональная вёрстка сайтов»."></a>
+    </p>
+  </footer>
+
+</body>
+
 </html>
