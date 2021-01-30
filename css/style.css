@@ -1,0 +1,271 @@
+@font-face {
+  font-family: "PT Sans";
+  src: local("PT Sans"), url(../fonts/PTSans.woff2) format("woff2"), url(../fonts/PTSans.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: local("PT Sans Bold"), url(../fonts/PTSans-Bold.woff2) format("woff2"), url(../fonts/PTSans-Bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* Variables */
+
+:root {
+  --basic-disabled: #6A6A6A;
+  --basic-text: #333;
+  --basic-icon: #A9A9A9;
+  --basic-white: #FFF;
+  --basic-black: #000;
+  --basic-neutral: #EEE;
+  --basic-dark: #766357;
+  --basic-light: #81B3D2;
+  --basic-extra-dark: #231F20;
+  --basic-extra-light: #BDBBBC;
+  --booking-input: #F2F2F2;
+  --booking-input-hover: #EBEBEB;
+  --booking-input-focus: #E5E5E5;
+  --btn-dark-hover: #604E43;
+  --btn-dark-active: #503E33;
+  --btn-light-hover: #669EC0;
+  --btn-light-active: #5496BD;
+  --filter-thumb: #ABABAB;
+  --sort-button: #CACACA;
+  --search-result-rating: #666;
+}
+
+
+/* Global */
+
+.page-body {
+  min-width: 1200px;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--basic-text);
+  text-transform: uppercase;
+  text-align: center;
+  background-color: var(--basic-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.title {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+
+.btn {
+  border: none;
+  font: inherit;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--basic-white);
+}
+
+.btn-dark {
+  background-color: var(--basic-dark);
+}
+
+.btn-dark:hover,
+.btn-dark:focus {
+  background-color: var(--btn-dark-hover);
+}
+
+.btn-dark:active {
+  background-color: var(--btn-dark-active);
+}
+
+.btn-dark:active span {
+  opacity: 0.3;
+}
+
+.btn-light {
+  background-color: var(--basic-light);
+}
+
+.btn-light:hover,
+.btn-light:focus {
+  background-color: var(--btn-light-hover);
+}
+
+.btn-light:active {
+  background-color: var(--btn-light-active);
+}
+
+.btn-light:active span {
+  opacity: 0.3;
+}
+
+
+/* Header */
+
+.main-header {
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.site-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  color: var(--basic-black);
+}
+
+.site-nav a.active {
+  color: var(--basic-dark);
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: var(--basic-light);
+}
+
+.site-nav a:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+
+/* Welcome */
+
+.welcome {
+  background-color: var(--basic-light);
+}
+
+
+/* Features */
+
+.features {
+  line-height: 26px;
+}
+
+.features-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 21px;
+}
+
+.features-item-emphasis {
+  background-color: var(--basic-light);
+  color: var(--basic-white);
+}
+
+.features-item .title {
+  line-height: 21px;
+  color: var(--basic-white);
+}
+
+.features-item h3 {
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--basic-black);
+}
+
+.features-item:last-child {
+  background-color: var(--basic-neutral);
+}
+
+
+/* Offer */
+
+.title-big {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--basic-black);
+}
+
+.offer {
+  line-height: 24px;
+}
+
+
+/* Booking */
+
+.booking {
+  font-weight: 700;
+  color: var(--basic-black);
+  line-height: 26px;
+}
+
+.booking input {
+  font: inherit;
+  text-transform: uppercase;
+  border: none;
+  background-color: var(--booking-input);
+}
+
+.booking input:hover {
+  background-color: var(--booking-input-hover);
+}
+
+.booking input:focus {
+  background-color: var(--basic-white);
+  outline: 2px solid var(--booking-input-focus);
+}
+
+.booking .btn {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.booking-count-btn {
+  background-color: var(--booking-input);
+}
+
+
+/* Footer */
+
+.main-footer {
+  background-color: rgba(255, 255, 255, .9);
+}
+
+.contacts a {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+
+.social ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-link {
+  background-color: var(--basic-light);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--btn-light-hover);
+}
+
+.social-link:active {
+  background-color: var(--btn-light-active);
+}
+
+.copy {
+  line-height: 26px;
+  color: var(--basic-black);
+}
