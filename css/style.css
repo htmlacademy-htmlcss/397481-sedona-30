@@ -31,9 +31,9 @@
   --footer-logo-default: #231F20;
   --footer-logo-active: #BDBBBC;
   --footer-logo-hover: #81B3D2;
-  --field-bg: #F2F2F2;
-  --field-bg-hover: #EBEBEB;
-  --field-bg-focus: #E5E5E5;
+  --main-bg: #F2F2F2;
+  --main-bg-hover: #EBEBEB;
+  --main-bg-focus: #E5E5E5;
   --filter-thumb: #ABABAB;
   --sort-button: #CACACA;
   --results-rating-txt: #666;
@@ -56,7 +56,7 @@
   line-height: 1.5;
   color: var(--text-default);
   text-transform: uppercase;
-  background-color: var(--field-bg);
+  background-color: var(--main-bg);
   height: 100%;
 }
 
@@ -74,12 +74,13 @@
   grid-template-rows: min-content 1fr min-content;
 }
 
-.visuality-hidden {
+.visibility-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  margin: -1px;
 }
 
 a {
@@ -209,7 +210,10 @@ img {
 
 .welcome {
   background-color: var(--basic-neutral);
-  height: 509px;
+  padding: 77px 0 80px;
+  background-image: url(../img/bg-main.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
@@ -326,16 +330,16 @@ img {
   font: inherit;
   text-transform: uppercase;
   border: none;
-  background-color: var(--field-bg);
+  background-color: var(--main-bg);
 }
 
 .booking input:hover {
-  background-color: var(--field-bg-hover);
+  background-color: var(--main-bg-hover);
 }
 
 .booking input:focus {
   background-color: var(--basic-white);
-  outline: 2px solid var(--field-bg-focus);
+  outline: 2px solid var(--main-bg-focus);
 }
 
 .booking .btn {
@@ -344,7 +348,7 @@ img {
 }
 
 .booking-count-btn {
-  background-color: var(--field-bg);
+  background-color: var(--main-bg);
 }
 
 
@@ -369,8 +373,11 @@ img {
   display: flex;
 }
 
-.filter-form fieldset {
+.filter-field {
   border: none;
+  padding: 0;
+  margin: 0;
+  width: 252px;
 }
 
 .filter-price {
@@ -407,6 +414,7 @@ img {
   font-size: 12px;
   line-height: 1.5;
   color: var(--basic-black);
+  padding: 30px 0;
   display: grid;
   grid-template-columns: 1fr max-content;
   align-items: center;
@@ -417,11 +425,18 @@ img {
   align-items: center;
 }
 
+.sorting>.title {
+  margin: 0 46px 0 0;
+}
+
 .sorting-list {
   list-style: none;
   margin: 0;
-  padding: 0;
   display: flex;
+}
+
+.sorting-item:not(:last-child) {
+  margin-right: 32px;
 }
 
 .sorting-item a.active {
@@ -444,6 +459,10 @@ img {
   border-bottom-color: transparent;
 }
 
+.results p {
+  margin: 0;
+}
+
 .results-list {
   list-style: none;
   margin: 0;
@@ -451,7 +470,12 @@ img {
 }
 
 .results-item {
-  border-top: 1px solid var(--field-bg-focus);
+  border-top: 1px solid var(--main-bg-focus);
+  padding: 30px 0;
+}
+
+.results-item:last-child {
+  border-bottom: 1px solid var(--main-bg-focus);
 }
 
 .results-item .container {
@@ -459,9 +483,32 @@ img {
   grid-template-columns: 1fr max-content;
 }
 
+.results-card {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  grid-template-rows: repeat(3, max-content);
+  align-items: start;
+  column-gap: 6px;
+}
+
+.results-card>img {
+  grid-row: 1/-1;
+  margin-right: 23px;
+}
+
+.results-card>.btn {
+  padding: 3px 17px;
+  align-self: end;
+}
+
+.place-name {
+  margin-top: -5px;
+  grid-column: 2/-1;
+}
+
 .rating {
   color: var(--results-rating-txt);
-  background-color: var(--field-bg);
+  background-color: var(--main-bg);
 }
 
 
@@ -473,25 +520,46 @@ img {
 }
 
 .main-footer .container {
+  min-height: 120px;
   display: grid;
+  align-items: center;
   grid-template-columns: 1fr 400px 1fr;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contacts a {
   font-weight: 700;
   font-size: 21px;
   line-height: 1.238;
+  margin-bottom: 9px;
   color: var(--basic-black);
 }
 
-.social ul {
+.social-list {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 48px;
   background-color: var(--c-primary);
+}
+
+.social-list>li+li {
+  margin-left: 6px;
 }
 
 .social-link:hover,
