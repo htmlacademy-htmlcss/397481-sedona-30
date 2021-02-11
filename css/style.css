@@ -74,7 +74,7 @@
   grid-template-rows: min-content 1fr min-content;
 }
 
-.visuality-hidden {
+.visibility-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -488,13 +488,12 @@ img {
   grid-template-columns: repeat(3, max-content);
   grid-template-rows: repeat(3, max-content);
   align-items: start;
-  --gap: 6px;
-  column-gap: var(--gap);
+  column-gap: 6px;
 }
 
 .results-card>img {
   grid-row: 1/-1;
-  margin-right: calc(29px - var(--gap));
+  margin-right: 23px;
 }
 
 .results-card>.btn {
