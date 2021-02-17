@@ -67,6 +67,7 @@
                   <input type="checkbox" name="apartments" class="visibility-hidden" id="filter-apartments" checked>
                   <label for="filter-apartments">Апартаменты</label>
                 </li>
+
               </ul>
             </fieldset>
 
@@ -74,22 +75,23 @@
               <legend>Стоимость в сутки (Р):</legend>
               <div class="price-control">
                 <div class="min-box">
-                  <input type="number" name="min-price" id="filter-min-price">
-                  <label for="filter-min-price" data-num="0">От </label>
+                  <input type="number" name="min-price" id="filter-min-price" placeholder="От 0" required>
+                  <!-- <label for="filter-min-price">От </label> -->
                 </div>
                 <div class="max-box">
-                  <input type="number" name="max-price" id="filter-max-price"> <label for="filter-max-price" data-num="3000">До </label>
+                  <input type="number" name="max-price" id="filter-max-price" placeholder="До 3000" required>
+                  <!-- <label for="filter-max-price">До </label> -->
                 </div>
               </div>
               <div class="range-control">
                 <div class="range-track">
                   <div class="range-bar"></div>
-                  <div class="thumb thumb-min"></div>
-                  <div class="thumb thumb-max"></div>
+                  <button type="button" class="thumb thumb-min"></button>
+                  <button type="button" class="thumb thumb-max"></button>
                 </div>
               </div>
 
-              <button type="button" class="btn btn-filter">Показать</button>
+              <button type="submit" class="btn btn-filter">Показать</button>
             </fieldset>
           </form>
         </section>
@@ -119,11 +121,13 @@
             <div class="container">
               <div class="results-card">
                 <img src="img/card_image/amara-resort.jpg" width="135" height="90" alt="">
-                <a href="#" class="title place-name">Amara Resort & Spa</a>
-                <p class="place-type">Гостиница</p>
-                <p>от <span class="place-price">4000</span> Р.</p>
-                <a href="blank.html" class="btn btn-primary">Подробнее</a>
-                <a href="blank.html" class="btn btn-secondary">Забронировать</a>
+                <div class="card-info">
+                  <a href="#" class="title place-name">Amara Resort & Spa</a>
+                  <p class="place-type">Гостиница</p>
+                  <p>от <span class="place-price">4000</span> Р.</p>
+                  <a href="blank.html" class="btn btn-primary">Подробнее</a>
+                  <a href="blank.html" class="btn btn-secondary">Забронировать</a>
+                </div>
               </div>
 
               <div class="results-rating" data-stars="stars-4">
@@ -136,11 +140,13 @@
             <div class="container">
               <div class="results-card">
                 <img src="img/card_image/desert-quail.jpg" width="135" height="90" alt="">
-                <a href="#" class="title place-name">Desert Quail Inn</a>
-                <p class="place-type">Мотель</p>
-                <p>от <span class="place-price">3000</span> Р.</p>
-                <a href="blank.html" class="btn btn-primary">Подробнее</a>
-                <a href="blank.html" class="btn btn-secondary">Забронировать</a>
+                <div class="card-info">
+                  <a href="#" class="title place-name">Desert Quail Inn</a>
+                  <p class="place-type">Мотель</p>
+                  <p>от <span class="place-price">3000</span> Р.</p>
+                  <a href="blank.html" class="btn btn-primary">Подробнее</a>
+                  <a href="blank.html" class="btn btn-secondary">Забронировать</a>
+                </div>
               </div>
 
               <div class="results-rating" data-stars="stars-3">
@@ -153,11 +159,13 @@
             <div class="container">
               <div class="results-card">
                 <img src="img/card_image/villas-at-poco-diablo.jpg" width="135" height="90" alt="">
-                <a href="#" class="title place-name">Villas at Poco Diablo</a>
-                <p class="place-type">Апартаменты</p>
-                <p>от <span class="place-price">2000</span> Р.</p>
-                <a href="blank.html" class="btn btn-primary">Подробнее</a>
-                <a href="blank.html" class="btn btn-secondary">Забронировать</a>
+                <div class="card-info">
+                  <a href="#" class="title place-name">Villas at Poco Diablo</a>
+                  <p class="place-type">Апартаменты</p>
+                  <p>от <span class="place-price">2000</span> Р.</p>
+                  <a href="blank.html" class="btn btn-primary">Подробнее</a>
+                  <a href="blank.html" class="btn btn-secondary">Забронировать</a>
+                </div>
               </div>
 
               <div class="results-rating" data-stars="stars-2">
