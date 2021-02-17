@@ -34,48 +34,64 @@
         <section class="filter container">
           <h2 class="visibility-hidden">Форма выбора</h2>
           <form action="https://echo.htmlacademy.ru/" method="GET" class="filter-form">
-            <fieldset class="filter-field">
+            <fieldset class="filter-field checkbox-field">
               <legend>Инфраструктура:</legend>
               <ul class="filter-list">
                 <li>
-                  <input type="checkbox" name="pool" id="filter-pool" checked>
+                  <input type="checkbox" name="pool" class="visibility-hidden" id="filter-pool" checked>
                   <label for="filter-pool">Бассейн</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="parking" id="filter-parking">
+                  <input type="checkbox" name="parking" class="visibility-hidden" id="filter-parking">
                   <label for="filter-parking">Парковка</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="wifi" id="filter-wifi">
+                  <input type="checkbox" name="wifi" class="visibility-hidden" id="filter-wifi">
                   <label for="filter-wifi">Wi-Fi</label>
                 </li>
               </ul>
             </fieldset>
 
-            <fieldset class="filter-field">
+            <fieldset class="filter-field checkbox-field">
               <legend>Тип жилья:</legend>
               <ul class="filter-list">
                 <li>
-                  <input type="checkbox" name="hotel" id="filter-hotel" checked>
+                  <input type="checkbox" name="hotel" class="visibility-hidden" id="filter-hotel" checked>
                   <label for="filter-hotel">Гостиница</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="motel" id="filter-motel" checked>
+                  <input type="checkbox" name="motel" class="visibility-hidden" id="filter-motel" checked>
                   <label for="filter-motel">Мотель</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="apartments" id="filter-apartments" checked>
+                  <input type="checkbox" name="apartments" class="visibility-hidden" id="filter-apartments" checked>
                   <label for="filter-apartments">Апартаменты</label>
                 </li>
+
               </ul>
             </fieldset>
 
             <fieldset class="filter-field filter-price">
               <legend>Стоимость в сутки (Р):</legend>
-              <label>От <input type="number" name="min-price" id="filter-min-price"></label>
-              <label>До<input type="number" name="max-price" id="filter-max-price"></label>
-              <input type="range">
-              <button type="button" class="btn btn-filter">Показать</button>
+              <div class="price-control">
+                <div class="min-box">
+                  <input type="number" name="min-price" id="filter-min-price" placeholder="От 0" required>
+                  <!-- <label for="filter-min-price">От </label> -->
+                </div>
+                <div class="max-box">
+                  <input type="number" name="max-price" id="filter-max-price" placeholder="До 3000" required>
+                  <!-- <label for="filter-max-price">До </label> -->
+                </div>
+              </div>
+              <div class="range-control">
+                <div class="range-track">
+                  <div class="range-bar"></div>
+                  <button type="button" class="thumb thumb-min"></button>
+                  <button type="button" class="thumb thumb-max"></button>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-filter">Показать</button>
             </fieldset>
           </form>
         </section>
@@ -94,8 +110,9 @@
             </ul>
           </div>
           <div class="sorting-btn">
-            <button type="button" class="btn"><img src="img/icons/icon-up-dir.svg" alt="Сортировка по возрастанию."></button>
-            <button type="button" class="btn"><img src="img/icons/icon-down-dir.svg" alt="Сортировка по убыванию."></button>
+            <a href="" class="btn"><svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0L0 10h11L5.5 0z" fill="#CACACA"/></svg></a>
+
+            <a href="" class="btn current"><svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 10L11 0H0l5.5 10z" fill="#CACACA"/></svg></a>
           </div>
         </header>
 
@@ -104,16 +121,17 @@
             <div class="container">
               <div class="results-card">
                 <img src="img/card_image/amara-resort.jpg" width="135" height="90" alt="">
-                <a href="#" class="title place-name">Amara Resort & Spa</a>
-                <p class="place-type">Гостиница</p>
-                <p>от <span class="place-price">4000</span> Р.</p>
-                <a href="blank.html" class="btn btn-primary">Подробнее</a>
-                <a href="blank.html" class="btn btn-secondary">Забронировать</a>
+                <div class="card-info">
+                  <a href="#" class="title place-name">Amara Resort & Spa</a>
+                  <p class="place-type">Гостиница</p>
+                  <p>от <span class="place-price">4000</span> Р.</p>
+                  <a href="blank.html" class="btn btn-primary">Подробнее</a>
+                  <a href="blank.html" class="btn btn-secondary">Забронировать</a>
+                </div>
               </div>
 
-              <div class="results-rating">
-                <span>4 звезды</span>
-                <!--Описание. Скроется стилями-->
+              <div class="results-rating" data-stars="stars-4">
+                <span class="visibility-hidden">4 звезды</span>
                 <p class="rating">Рейтинг: <span>8,5</span></p>
               </div>
             </div>
@@ -122,16 +140,17 @@
             <div class="container">
               <div class="results-card">
                 <img src="img/card_image/desert-quail.jpg" width="135" height="90" alt="">
-                <a href="#" class="title place-name">Desert Quail Inn</a>
-                <p class="place-type">Мотель</p>
-                <p>от <span class="place-price">3000</span> Р.</p>
-                <a href="blank.html" class="btn btn-primary">Подробнее</a>
-                <a href="blank.html" class="btn btn-secondary">Забронировать</a>
+                <div class="card-info">
+                  <a href="#" class="title place-name">Desert Quail Inn</a>
+                  <p class="place-type">Мотель</p>
+                  <p>от <span class="place-price">3000</span> Р.</p>
+                  <a href="blank.html" class="btn btn-primary">Подробнее</a>
+                  <a href="blank.html" class="btn btn-secondary">Забронировать</a>
+                </div>
               </div>
 
-              <div class="results-rating">
-                <span>3 звезды</span>
-                <!--Описание. Скроется стилями-->
+              <div class="results-rating" data-stars="stars-3">
+                <span class="visibility-hidden">3 звезды</span>
                 <p class="rating">Рейтинг: <span>8,9</span></p>
               </div>
             </div>
@@ -140,16 +159,17 @@
             <div class="container">
               <div class="results-card">
                 <img src="img/card_image/villas-at-poco-diablo.jpg" width="135" height="90" alt="">
-                <a href="#" class="title place-name">Villas at Poco Diablo</a>
-                <p class="place-type">Апартаменты</p>
-                <p>от <span class="place-price">2000</span> Р.</p>
-                <a href="blank.html" class="btn btn-primary">Подробнее</a>
-                <a href="blank.html" class="btn btn-secondary">Забронировать</a>
+                <div class="card-info">
+                  <a href="#" class="title place-name">Villas at Poco Diablo</a>
+                  <p class="place-type">Апартаменты</p>
+                  <p>от <span class="place-price">2000</span> Р.</p>
+                  <a href="blank.html" class="btn btn-primary">Подробнее</a>
+                  <a href="blank.html" class="btn btn-secondary">Забронировать</a>
+                </div>
               </div>
 
-              <div class="results-rating">
-                <span>2 звезды</span>
-                <!--Описание. Скроется стилями-->
+              <div class="results-rating" data-stars="stars-2">
+                <span class="visibility-hidden">2 звезды</span>
                 <p class="rating">Рейтинг: <span>9,2</span></p>
               </div>
             </div>
@@ -170,21 +190,20 @@
           <h2 class="visibility-hidden">Мы в соцсетях</h2>
           <ul class="social-list">
             <li>
-              <a class="social-link" href="#">
+              <a class="social-link link-twitter" href="#">
                 <span class="visibility-hidden">Twitter</span>
-                <img src="img/icons/twitter.svg" alt="twitter">
+
               </a>
             </li>
             <li>
-              <a class="social-link" href="#">
+              <a class="social-link link-fb" href="#">
                 <span class="visibility-hidden">Facebook</span>
-                <img src="img/icons/fb-icon.svg" alt="facebook">
+
               </a>
             </li>
             <li>
-              <a class="social-link" href="#">
+              <a class="social-link link-youtube" href="#">
                 <span class="visibility-hidden">Youtube</span>
-                <img src="img/icons/youtube.svg" alt="youtube">
               </a>
             </li>
           </ul>
