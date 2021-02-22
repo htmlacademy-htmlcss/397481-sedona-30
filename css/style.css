@@ -42,6 +42,7 @@
   --rgb-shadow: 0, 1, 1;
 }
 
+
 /* Global */
 
 .page {
@@ -117,12 +118,16 @@ path {
   line-height: 1.24;
   color: var(--basic-black);
 }
-.link:focus,.btn:focus,.input:focus{
+
+.link:focus,
+.btn:focus,
+.input:focus {
   outline: none;
   z-index: 1;
   -webkit-box-shadow: 0 0 2px 4px var(--c-primary);
-          box-shadow: 0 0 2px 4px var(--c-primary);
+  box-shadow: 0 0 2px 4px var(--c-primary);
 }
+
 .btn {
   border: none;
   font-weight: 700;
@@ -442,9 +447,11 @@ path {
   position: relative;
 }
 
+
 .booking .btn-secondary {
   position: relative;
   padding: 30px 0 31px;
+  z-index: 2;
 }
 
 .booking-form {
@@ -463,9 +470,19 @@ path {
   background-color: var(--basic-white);
   -webkit-box-shadow: 0px 7px 15px rgba(var(--rgb-shadow), 0.15);
   box-shadow: 0px 7px 15px rgba(var(--rgb-shadow), 0.15);
+  -webkit-transition: visibility .5s, opacity .5s, -webkit-transform .5s;
+  transition: visibility .5s, opacity .5s, -webkit-transform .5s;
+  transition: visibility .5s, opacity .5s, transform .5s;
+  transition: visibility .5s, opacity .5s, transform .5s, -webkit-transform .5s;
 
 }
 
+.booking-form-hide{
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+    }
 .booking-row {
   display: -ms-grid;
   display: grid;
@@ -582,7 +599,6 @@ label[for="childrens-number"] {
   margin-top: 29px;
   cursor: pointer;
 }
-
 
 /* Catalog page */
 
@@ -818,7 +834,7 @@ label[for="childrens-number"] {
 
 .thumb {
   -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   position: absolute;
   top: -9px;
   padding: 0px;
@@ -835,11 +851,13 @@ label[for="childrens-number"] {
   transition: transform .3s;
   transition: transform .3s, -webkit-transform .3s;
 }
-.thumb:focus{
-  -webkit-box-shadow: 0 2px 0 var(--filter-thumb),0 0 2px 4px var(--c-primary);
-          box-shadow: 0 2px 0 var(--filter-thumb),0 0 2px 4px var(--c-primary);
+
+.thumb:focus {
+  -webkit-box-shadow: 0 2px 0 var(--filter-thumb), 0 0 2px 4px var(--c-primary);
+  box-shadow: 0 2px 0 var(--filter-thumb), 0 0 2px 4px var(--c-primary);
 }
- .thumb-min {
+
+.thumb-min {
   left: 0%;
 }
 
@@ -847,7 +865,7 @@ label[for="childrens-number"] {
   left: 78%;
 }
 
- .thumb:hover,
+.thumb:hover,
 .thumb:focus {
   cursor: -webkit-grab;
   cursor: grab;
@@ -855,7 +873,7 @@ label[for="childrens-number"] {
   transform: scale(1.2);
 }
 
- .thumb:active {
+.thumb:active {
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
