@@ -677,23 +677,30 @@
   .price-control input::-webkit-input-placeholder {
     text-transform: uppercase;
     color: var(--basic-white);
+    opacity: 1;
   }
   .price-control input::-moz-placeholder {
     text-transform: uppercase;
     color: var(--basic-white);
+    opacity: 1;
   }
+
   .price-control input:-ms-input-placeholder {
     text-transform: uppercase;
     color: var(--basic-white);
+    opacity: 1;
   }
   .price-control input::-ms-input-placeholder {
     text-transform: uppercase;
     color: var(--basic-white);
+    opacity: 1;
   }
   .price-control input::placeholder {
     text-transform: uppercase;
     color: var(--basic-white);
+    opacity: 1;
   }
+
   .price-control input:valid+label,
   .price-control input:not(:placeholder-shown)+label {
     opacity: 1;

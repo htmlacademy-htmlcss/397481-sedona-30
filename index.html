@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru" class="page index-page">
-
 <head>
   <meta charset="utf-8">
   <link rel="icon" href="favicon.ico">
@@ -11,7 +10,6 @@
   <link rel="stylesheet" href="css/style.min.css">
   <title>HTML Academy: Седона</title>
 </head>
-
 <body class="page-body page-center">
   <div class="page-wrapper">
     <header class="main-header">
@@ -27,19 +25,16 @@
         </ul>
       </nav>
     </header>
-
     <main>
       <h1 class="visibility-hidden">Гостиницы Седоны.</h1>
       <section class="welcome">
         <h2 class="visibility-hidden">Добро пожаловать в Седону.</h2>
         <img src="img/welcome.svg" width="455" height="350" alt="Добро пожаловать в Седону.">
       </section>
-
       <section class="features">
         <h2 class="visibility-hidden">Преимущества.</h2>
         <p class="title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-
         <ul class="features-list">
           <li class="features-item features-item-col2">
             <div class="features-item-card features-item-emphasis">
@@ -98,27 +93,21 @@
             </ul>
           </li>
         </ul>
-
       </section>
-
       <section class="offer">
         <h2 class="visibility-hidden">Предложение.</h2>
         <p class="title-big">Заинтересовались?</p>
         <p>Укажите предполагаемые даты поездки,<br aria-hidden="true"> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-
         <section class="booking">
           <h2 class="visibility-hidden">Бронирование.</h2>
-          <button class="btn btn-secondary wide-block" id="show-form">Поиск гостиницы в Седоне</button>
+          <button type="button" class="btn btn-secondary wide-block" id="show-form">Поиск гостиницы в Седоне</button>
           <form action="https://echo.htmlacademy.ru/" method="POST" class="booking-form" name="bookingForm">
-
             <div class="booking-row">
               <label for="date-in">Дата заезда:</label>
               <input type="text" name="date-in" class="input req" id="date-in" placeholder="24 апреля 2017">
               <button type="button" class="btn btn-cal datein-cal" aria-label="Выберите дату заезда">
                 <svg aria-hidden="true" focusable="false" width="21" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.406 3.025h2.845c.966 0 1.749.822 1.749 1.837v16.302C21 22.179 20.217 23 19.251 23H1.75C.784 23 0 22.179 0 21.164V4.862c0-1.015.784-1.837 1.75-1.837h2.843V1.648c0-.381.294-.689.657-.689.362 0 .656.308.656.689v1.377h3.938V1.648c0-.381.294-.689.657-.689.361 0 .655.308.655.689v1.377h3.938V1.648c0-.381.293-.689.656-.689.362 0 .656.308.656.689v1.377zm3.159 18.459a.448.448 0 00.123-.32h.001V4.862a.449.449 0 00-.437-.459h-2.845v1.378c0 .381-.294.689-.656.689-.363 0-.656-.308-.656-.689V4.403h-3.938v1.378c0 .381-.294.689-.655.689-.363 0-.657-.308-.657-.689V4.403H5.907v1.378c0 .381-.294.689-.656.689-.363 0-.657-.308-.657-.689V4.403H1.75a.45.45 0 00-.438.459v16.302a.45.45 0 00.438.459h17.501a.448.448 0 00.314-.139z" fill="#A9A9A9"/><path fill-rule="evenodd" clip-rule="evenodd" d="M4.594 9.225h2.625v2.066H4.594V9.225zm0 3.443h2.625v2.067H4.594v-2.067zm2.625 3.444H4.594v2.066h2.625v-2.066zm1.969 0h2.625v2.066H9.188v-2.066zm2.625-3.444H9.188v2.067h2.625v-2.067zM9.188 9.225h2.625v2.066H9.188V9.225zm7.218 6.887h-2.625v2.066h2.625v-2.066zm-2.625-3.444h2.625v2.067h-2.625v-2.067zm2.625-3.443h-2.625v2.066h2.625V9.225z" fill="#A9A9A9"/></svg></button>
             </div>
-
-
             <div class="booking-row">
               <label for="date-out">Дата выезда:</label>
               <input type="text" name="date-out" class="input req" id="date-out" placeholder="4 июля 2017">
@@ -132,7 +121,6 @@
                 <input type="text" value="2" name="adults" id="adults-number" class="input">
                 <button type="button" class="btn booking-count-btn" id="adults-plus" aria-label="Увеличить количество взрослых на 1"><svg aria-hidden="true" focusable="false" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.23 6.77V11h2.54V6.77H11V4.23H6.77V0H4.23v4.23H0v2.54h4.23z" fill="#A9A9A9"/></svg></button>
               </div>
-
               <label for="childrens-number" aria-label="Выберите количество детей">Дети:</label>
               <div class="childrens-count">
                 <button type="button" class="btn booking-count-btn" id="children-minus" aria-label="Уменьшить количество детей на 1"><svg aria-hidden="true" focusable="false" width="12" height="3" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#A9A9A9" d="M0 0h12v3H0z"/></svg></button>
@@ -140,41 +128,34 @@
                 <button type="button" class="btn booking-count-btn" id="children-plus" aria-label="Увеличить количество детей на 1"><svg aria-hidden="true" focusable="false" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.23 6.77V11h2.54V6.77H11V4.23H6.77V0H4.23v4.23H0v2.54h4.23z" fill="#A9A9A9"/></svg></button>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary" aria-label="Подобрать варианты">Найти</button>
+            <button type="submit" class="btn btn-primary">Найти</button>
           </form>
         </section>
-
       </section>
-
       <section>
         <h2 class="visibility-hidden">Карта</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d593456.2128734135!2d-111.8583914682152!3d34.745178262770885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1613987370212!5m2!1sru!2sru" width="1200" height="589" style="border:0;" allowfullscreen="" loading="lazy" title="Седона на карте с указанием номеров трасс."></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d593456.2128734135!2d-111.8583914682152!3d34.745178262770885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1613987370212!5m2!1sru!2sru"
+          width="1200" height="589" style="border:0;" allowfullscreen="" loading="lazy" title="Седона на карте с указанием номеров трасс."></iframe>
       </section>
-
     </main>
-
     <footer class="main-footer">
-
       <div class="container">
         <section class="contacts">
           <h2 class="visibility-hidden">Наши контакты.</h2>
           <a href="#" class="link">#VISITSEDONA</a>
           <a href="tel:+74956660166" class="link">ТЕЛ: +7(495) 666-01-66</a>
         </section>
-
         <section class="social">
           <h2 class="visibility-hidden">Мы в соцсетях</h2>
           <ul class="social-list">
             <li>
               <a class="link social-link link-twitter" href="#">
                 <span class="visibility-hidden">Твиттер</span>
-
               </a>
             </li>
             <li>
               <a class="link social-link link-fb" href="#">
                 <span class="visibility-hidden">Фэйсбук</span>
-
               </a>
             </li>
             <li>
@@ -184,7 +165,6 @@
             </li>
           </ul>
         </section>
-
         <p class="copy">
           Website by
           <a href="https://htmlacademy.ru/intensive/htmlcss" class="link" aria-label="Онлайн‑курс
@@ -194,8 +174,6 @@
       </div>
     </footer>
   </div>
-
   <script src="js/script.min.js"></script>
 </body>
-
 </html>
