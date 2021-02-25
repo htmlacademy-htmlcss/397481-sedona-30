@@ -514,6 +514,11 @@
     margin-top: 29px;
     cursor: pointer;
   }
+
+/* Map */
+.map-hide{
+  display: none;
+}
   /* Catalog page */
   /* Filter */
   .filter-wrapper {

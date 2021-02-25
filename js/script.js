@@ -6,6 +6,8 @@
   const childrensInput = bookingForm.querySelector('#childrens-number');
   const dateIn = bookingForm.querySelector('#date-in');
   const dateOut = bookingForm.querySelector('#date-out');
+  document.querySelector('.map-img').classList.add('map-hide');
+  document.querySelector('.map-frame').classList.remove('map-hide');
   let isStorageSupport = true;
   let adultsCount = '';
   let childrensCount = '';
